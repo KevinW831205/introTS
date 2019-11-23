@@ -67,14 +67,38 @@
 // }
 
 
-interface Point{
-    x: number,
-    y: number
+
+// Interface
+// interface Point{
+//     x: number,
+//     y: number
+// }
+
+// let drawPoint = (point: Point) => {
+//     // ...
+// }
+
+// drawPoint({x:1, y:2})
+
+
+
+// Classes
+// interface Point {
+//     x:number,
+//     y:number,
+//     draw: () => void
+// }
+
+class Point {
+    x: number;
+    y: number;
+
+    draw() {
+        // ..
+    }
+
+    getDistance(){
+        // ..
+    }
+
 }
-
-let drawPoint = (point: Point) => {
-    // ...
-}
-
-drawPoint({x:1, y:2})
-
