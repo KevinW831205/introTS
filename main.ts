@@ -93,17 +93,22 @@ class Point {
     x: number;
     y: number;
 
-    draw() {
-        // ..
-        console.log("x: "+this.x + " Y: "+this.y);
+    constructor(x?:number ,y?:number){  // ? makes parameter optional
+        this.x = x;
+        this.y = y;
     }
 
-    getDistance(){
+    draw() {
+        // ..
+        console.log("x: " + this.x + " Y: " + this.y);
+    }
+
+    getDistance() {
         // ..
     }
 }
 
-let point = new Point();  //object
-point.x = 1;
-point.y =2;
+let point = new Point(5,3);  //object
 point.draw();
+
+let point2 = new Point();
