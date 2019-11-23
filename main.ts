@@ -49,7 +49,14 @@
 // enum Color { Red = 0, Green = 1, Blue = 2 }; // better to explicitly set the value of enum.
 // let backgroundColor = Color.Red;
 
-let message;
-message ="abc";
-let endsWithC = (message as string).endsWith('c');
-let alternativeWay = (<string> message).endsWith('c');
+// let message;
+// message ="abc";
+// let endsWithC = (message as string).endsWith('c');
+// let alternativeWay = (<string> message).endsWith('c');
+
+let log = function(message){
+    console.log(message);
+}
+
+let doLog = (message) => console.log(message);
+let dolog2 = () => console.log("empty")
