@@ -54,9 +54,27 @@
 // let endsWithC = (message as string).endsWith('c');
 // let alternativeWay = (<string> message).endsWith('c');
 
-let log = function(message){
-    console.log(message);
+// let log = function(message){
+//     console.log(message);
+// }
+
+// let doLog = (message) => console.log(message);
+// let dolog2 = () => console.log("empty")
+
+
+// let drawPoint = (x,y)=>{
+//     // ...
+// }
+
+
+interface Point{
+    x: number,
+    y: number
 }
 
-let doLog = (message) => console.log(message);
-let dolog2 = () => console.log("empty")
+let drawPoint = (point: Point) => {
+    // ...
+}
+
+drawPoint({x:1, y:2})
+
