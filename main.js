@@ -35,7 +35,46 @@
 // let g: any[];
 // enum Color { Red = 0, Green = 1, Blue = 2 }; // better to explicitly set the value of enum.
 // let backgroundColor = Color.Red;
-var message;
-message = "abc";
-var endsWithC = message.endsWith('c');
-var alternativeWay = message.endsWith('c');
+// let message;
+// message ="abc";
+// let endsWithC = (message as string).endsWith('c');
+// let alternativeWay = (<string> message).endsWith('c');
+// let log = function(message){
+//     console.log(message);
+// }
+// let doLog = (message) => console.log(message);
+// let dolog2 = () => console.log("empty")
+// let drawPoint = (x,y)=>{
+//     // ...
+// }
+// Interface
+// interface Point{
+//     x: number,
+//     y: number
+// }
+// let drawPoint = (point: Point) => {
+//     // ...
+// }
+// drawPoint({x:1, y:2})
+// Classes
+// interface Point {
+//     x:number,
+//     y:number,
+//     draw: () => void
+// }
+var Point = /** @class */ (function () {
+    function Point() {
+    }
+    Point.prototype.draw = function () {
+        // ..
+        console.log("x: " + this.x + " Y: " + this.y);
+    };
+    Point.prototype.getDistance = function () {
+        // ..
+    };
+    return Point;
+}());
+var point = new Point(); //object
+point.x = 1;
+point.y = 2;
+point.draw();

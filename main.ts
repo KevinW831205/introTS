@@ -95,10 +95,15 @@ class Point {
 
     draw() {
         // ..
+        console.log("x: "+this.x + " Y: "+this.y);
     }
 
     getDistance(){
         // ..
     }
-
 }
+
+let point = new Point();  //object
+point.x = 1;
+point.y =2;
+point.draw();
