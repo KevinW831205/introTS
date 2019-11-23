@@ -32,20 +32,24 @@
 // let count = 5;
 // count = "a";   // typescript has type
 
-let a;      // if didn't declare type might have issues
-a = 1;
-a = true;
+// let a;      // if didn't declare type might have issues
+// a = 1;
+// a = true;
 
-// let b: number; //declare type to preven issue
-// b = 1;
-// b = true;
+// // let b: number; //declare type to preven issue
+// // b = 1;
+// // b = true;
 
-let c: boolean;
-let d: string;
-let e: any;
-let f: number[];
-let g: any[];
+// let c: boolean;
+// let d: string;
+// let e: any;
+// let f: number[];
+// let g: any[];
 
-enum Color { Red = 0, Green = 1, Blue = 2 }; // better to explicitly set the value of enum.
-let backgroundColor = Color.Red;
+// enum Color { Red = 0, Green = 1, Blue = 2 }; // better to explicitly set the value of enum.
+// let backgroundColor = Color.Red;
 
+let message;
+message ="abc";
+let endsWithC = (message as string).endsWith('c');
+let alternativeWay = (<string> message).endsWith('c');
