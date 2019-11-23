@@ -89,6 +89,7 @@
 //     draw: () => void
 // }
 
+/*
 class Point {
 
     constructor(private _x?: number, private _y?: number) {  // ? makes parameter optional
@@ -135,3 +136,10 @@ let x = point.x;
 console.log(x);
 
 // let point2 = new Point();
+*/
+
+
+import { Point } from './point';
+
+let point = new Point(1,2);
+point.draw()

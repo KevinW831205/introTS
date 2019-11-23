@@ -1,6 +1,8 @@
+"use strict";
 // function log(message){
 //     console.log(message);
 // }
+Object.defineProperty(exports, "__esModule", { value: true });
 // var message = "hello world";
 // log(message);
 // var x=1;
@@ -62,51 +64,54 @@
 //     y:number,
 //     draw: () => void
 // }
-var Point = /** @class */ (function () {
-    function Point(_x, _y) {
-        this._x = _x;
-        this._y = _y;
+/*
+class Point {
+
+    constructor(private _x?: number, private _y?: number) {  // ? makes parameter optional
         // if have access modifier in constructor the field will be initialized.
         // this.x = x;
         // this.y = y;
     }
-    Point.prototype.draw = function () {
+
+    draw() {
         // ..
         console.log("x: " + this._x + " Y: " + this._y);
-    };
-    Point.prototype.getDistance = function () {
+    }
+
+    getDistance() {
         // ..
-    };
-    Object.defineProperty(Point.prototype, "x", {
-        get: function () {
-            return this._x;
-        },
-        set: function (value) {
-            if (value < 0) {
-                throw new Error("Value cannot be less than zero");
-            }
-            else {
-                this._x = value;
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Point.prototype, "y", {
-        get: function () {
-            return this._y;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return Point;
-}());
-var point = new Point(5, 3); //object
+    }
+
+    get x() {
+        return this._x;
+    }
+
+    get y() {
+        return this._y;
+    }
+
+    set x(value) {
+        if (value < 0) {
+            throw new Error("Value cannot be less than zero")
+        } else {
+            this._x = value;
+        }
+    }
+}
+
+
+let point = new Point(5, 3);  //object
 point.draw();
 // point.getX();
 // point.setX(10);
 // point.getX();
 // point.setX(-2)
-var x = point.x;
+
+let x = point.x;
 console.log(x);
+
 // let point2 = new Point();
+*/
+var point_1 = require("./point");
+var point = new point_1.Point(1, 2);
+point.draw();
