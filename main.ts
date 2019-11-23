@@ -91,7 +91,7 @@
 
 class Point {
 
-    constructor(private x?:number , private y?:number){  // ? makes parameter optional
+    constructor(private _x?: number, private _y?: number) {  // ? makes parameter optional
         // if have access modifier in constructor the field will be initialized.
         // this.x = x;
         // this.y = y;
@@ -99,15 +99,39 @@ class Point {
 
     draw() {
         // ..
-        console.log("x: " + this.x + " Y: " + this.y);
+        console.log("x: " + this._x + " Y: " + this._y);
     }
 
     getDistance() {
         // ..
     }
+
+    get x() {
+        return this._x;
+    }
+
+    get y() {
+        return this._y;
+    }
+
+    set x(value) {
+        if (value < 0) {
+            throw new Error("Value cannot be less than zero")
+        } else {
+            this._x = value;
+        }
+    }
 }
 
-let point = new Point(5,3);  //object
-point.draw();
 
-let point2 = new Point();
+let point = new Point(5, 3);  //object
+point.draw();
+// point.getX();
+// point.setX(10);
+// point.getX();
+// point.setX(-2)
+
+let x = point.x;
+console.log(x);
+
+// let point2 = new Point();

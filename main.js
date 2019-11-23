@@ -63,18 +63,50 @@
 //     draw: () => void
 // }
 var Point = /** @class */ (function () {
-    function Point(x, y) {
-        this.x = x;
-        this.y = y;
+    function Point(_x, _y) {
+        this._x = _x;
+        this._y = _y;
+        // if have access modifier in constructor the field will be initialized.
+        // this.x = x;
+        // this.y = y;
     }
     Point.prototype.draw = function () {
         // ..
-        console.log("x: " + this.x + " Y: " + this.y);
+        console.log("x: " + this._x + " Y: " + this._y);
     };
     Point.prototype.getDistance = function () {
         // ..
     };
+    Object.defineProperty(Point.prototype, "x", {
+        get: function () {
+            return this._x;
+        },
+        set: function (value) {
+            if (value < 0) {
+                throw new Error("Value cannot be less than zero");
+            }
+            else {
+                this._x = value;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Point.prototype, "y", {
+        get: function () {
+            return this._y;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return Point;
 }());
 var point = new Point(5, 3); //object
 point.draw();
+// point.getX();
+// point.setX(10);
+// point.getX();
+// point.setX(-2)
+var x = point.x;
+console.log(x);
+// let point2 = new Point();
