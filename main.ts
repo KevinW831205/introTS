@@ -90,12 +90,11 @@
 // }
 
 class Point {
-    x: number;
-    y: number;
 
-    constructor(x?:number ,y?:number){  // ? makes parameter optional
-        this.x = x;
-        this.y = y;
+    constructor(private x?:number , private y?:number){  // ? makes parameter optional
+        // if have access modifier in constructor the field will be initialized.
+        // this.x = x;
+        // this.y = y;
     }
 
     draw() {
