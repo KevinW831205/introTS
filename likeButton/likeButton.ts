@@ -15,15 +15,10 @@ export class LikeButton {
     } 
 
     click(){
-        if(this._onState){
-            this._likes --;
-            this._onState = false;
-            return this._likes;
-        } else {
-            this.likes ++;
-            this._onState = true;
-            return this.likes;
-        }
+        this._likes += (!this._onState) ? 1 : -1;
+        this._onState = !this._onState;
+        return this._likes
+
     }
 
 
